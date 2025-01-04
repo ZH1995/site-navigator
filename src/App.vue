@@ -1,22 +1,22 @@
 <template>
-  <div id="app">
-    <h1>My Vue App</h1>
+  
+   <div class="common-layout">
+    <el-container direction="vertical">
+      <Header></Header>
     
+      <el-main>Main</el-main>
+      <Footer></Footer>
+    </el-container>
   </div>
-
+  
 </template>
 
 <script setup lang="ts">
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
-import { storeToRefs } from 'pinia';
-import { userStore } from './store/user';
-const user = userStore()
-user.changeUserName('hello')
-console.log(user.getUserName)
-const userInfo = storeToRefs(user)
-console.log(userInfo)
 </script>
 
 <style>
- 
+
 </style>
