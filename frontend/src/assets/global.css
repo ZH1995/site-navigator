@@ -1,0 +1,14 @@
+/* src/assets/global.css */
+body {
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  background: #F5F7FA;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4F8FFF;
+  margin-bottom: 18px;
+}

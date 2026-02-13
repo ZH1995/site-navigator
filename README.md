@@ -1,39 +1,65 @@
-# site-navigator
+# 真不错导航（site-navigator）
 
-This template should help get you started developing with Vue 3 in Vite.
+一个现代化、响应式的网站导航平台，基于 Vue 3 + Vite 构建，支持多分类、侧边栏导航、卡片式展示和移动端适配。
 
-## Recommended IDE Setup
+## 功能特色
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 多分类网站导航，支持自定义分组
+- 美观现代的侧边栏，移动端自动收起为顶部栏
+- 卡片式网站展示，支持 logo、简介、跳转
+- 响应式布局，适配手机和平板
+- 支持提交收录网站
+- 一键部署脚本
 
-## Type Support for `.vue` Imports in TS
+## 项目结构
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── public/
+│   │   └── icons/
+│   ├── src/
+│   │   ├── App.vue
+│   │   ├── main.js
+│   │   ├── assets/
+│   │   │   └── global.css
+│   │   ├── components/
+│   │   │   ├── Footer.vue
+│   │   │   ├── Sidebar.vue
+│   │   │   ├── SiteCard.vue
+│   │   │   └── SiteCategory.vue
+│   │   └── data/
+│   │       └── sites.js
+├── deploy.sh
+├── README.md
 ```
 
-### Compile and Hot-Reload for Development
+## 本地开发
 
 ```sh
+cd frontend
+npm install
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## 构建与部署
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+部署脚本：[deploy.sh](deploy.sh) 支持一键部署到服务器（需配置 Nginx）。
 
-```sh
-npm run lint
-```
+## 更换 Logo 和标题
+
+- 修改 `frontend/index.html` 的 `<title>` 和 `<link rel="icon">`，logo图片放在 `public/icons/` 下。
+
+## 提交收录网站
+
+如需收录新网站，请发送邮件至：577435302@qq.com
+
+## License
+
+MIT
